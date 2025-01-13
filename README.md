@@ -1,6 +1,3 @@
-
-This is not complete. The sending thread works on the client side as intended but the receiving thread is not. Potential infinite loop due to race condition between the two threads. All other implementations work.
-
 Race conditions identified:
 - MessageQueue being accessed by multiple threads. Protected using mutexes
 - Although with flaws, the send and the receive threads are synchronized using two semaphores for input/output and two mutexes for threads
